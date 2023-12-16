@@ -45,6 +45,7 @@ func Start() {
 	account := NewBankAccount()
 
 	go account.Deposit(10000)
+	time.Sleep(1 * time.Second)
 	go account.Withdraw(500)
 	go account.Withdraw(333)
 	go account.Withdraw(5200)
